@@ -75,4 +75,20 @@ describe('parse', () => {
     it('should recognize 6 as Runic Power', () => assert.equal(parse.power(6), 'Runic Power'))
     it('should throw error for values > 6', () => assert.throws(() => parse.power(7), TypeError))
   })
+  describe('#date()', () => {
+    let now = new Date()
+
+    // this could have been so easy..
+    // let dateString = now.toLocaleFormat('%m/%d %H:%M:%S.%f')
+    let dateString = (now.getMonth() + 1) + 
+      '/' + now.getDate() + ' ' + 
+      ('0' + now.getHours()).slice(-2) + ':' + 
+      ('0' + now.getMinutes()).slice(-2) + ':' + 
+      ('0' + now.getSeconds()).slice(-2) + '.' + 
+      ('00' + now.getMilliseconds()).slice(-3)
+
+    it('should parse the current date correctly', () => {
+      assert.equal(parse.date(dateString).getTime(), now.getTime())
+    })
+  })
 })
