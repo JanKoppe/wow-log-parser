@@ -6,7 +6,7 @@
   "repository": "git@github.com:JanKoppe/wow-log-parser.git",
   "author": "Jan Koppe <post@jankoppe.de>",
   "license": "GPL-3.0",
-  "scripts": { 
+  "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
