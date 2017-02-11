@@ -1,3 +1,4 @@
+'use strict';
 /*
  *    wow-log-parser - Parse World of Warcraft combat logs
  *   Copyright (C) 2017   Jan Koppe <post@jankoppe.de>
