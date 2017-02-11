@@ -9,9 +9,6 @@
   "scripts": { 
     "test": "./node_modules/.bin/mocha"
   },
-  "dependencies": {
-    "node-grok": "^2.0.3"
-  },
   "devDependencies": {
     "mocha": "^3.2.0"
   }
