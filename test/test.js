@@ -44,4 +44,16 @@ describe('parse', () => {
     }
     it('should throw error for values > 127', () => assert.throws(() => parse.school(128), TypeError))
   })
+  describe('#power()', () => {
+    it('should throw error for values < -2', () => assert.throws(() => parse.power(-3), TypeError))
+    it('should recognize -2 as Health', () => assert.equal(parse.power(-2), 'Health'))
+    it('should throw error for value -1', () => assert.throws(() => parse.power(-1), TypeError))
+    it('should recognize 0 as Mana', () => assert.equal(parse.power(0), 'Mana'))
+    it('should recognize 1 as Rage', () => assert.equal(parse.power(1), 'Rage'))
+    it('should recognize 2 as Focus', () => assert.equal(parse.power(2), 'Focus'))
+    it('should recognize 3 as Energy', () => assert.equal(parse.power(3), 'Energy'))
+    it('should recognize 5 as Runes', () => assert.equal(parse.power(5), 'Runes'))
+    it('should recognize 6 as Runic Power', () => assert.equal(parse.power(6), 'Runic Power'))
+    it('should throw error for values > 6', () => assert.throws(() => parse.power(7), TypeError))
+  })
 })
